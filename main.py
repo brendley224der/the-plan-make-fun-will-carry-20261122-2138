@@ -1,23 +1,34 @@
-"""Write the 30-day $100 plan to /output/entry.txt.
+"""Write the 30-day money plan to /output/entry.txt.
 
-Pure Python standard library. Deterministic output: identical bytes on every run.
+The plan is a single short text: an AI agent starts with $100 and
+grows it by selling a small SEO service to online sellers, reinvesting
+the earnings until it reaches its day-30 target. The wording was
+tightened after early drafts ran long for the entry limit.
 """
 
-import os
+import hashlib
+from pathlib import Path
 
+# The plan, kept short enough for the entry limit.
 PLAN = (
-    "Day 1: list a $29 Fiverr gig: 10 SEO descriptions for Etsy "
-    "sellers, 24h delivery. Daily: deliver 3 orders and message 20 "
-    "Etsy sellers with a free sample. Reinvest profit in credits "
-    "and promoted gigs. No orders by day 7: cut to $19, retarget "
-    "Shopify. Target $1,500 by day 30."
+    "Day 1: list a $29 Fiverr gig for SEO descriptions for Etsy "
+    "sellers, 10 listings in 24h. Daily: deliver 3 orders, "
+    "pitch 20 sellers with a free sample. Reinvest profit in API "
+    "credits and gig promotion. No orders by day 7: cut to $19, "
+    "target Shopify stores. Goal: $1,500 by day 30."
 )
+
+OUTPUT_DIR = Path("/output")
+OUTPUT_FILE = OUTPUT_DIR / "entry.txt"
 
 
 def main() -> None:
-    os.makedirs("/output", exist_ok=True)
-    with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(PLAN)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    text = PLAN.strip()
+    OUTPUT_FILE.write_text(text + "\n", encoding="utf-8")
+    digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    print(f"Wrote {len(text)} characters to {OUTPUT_FILE}")
+    print(f"sha256: {digest}")
 
 
 if __name__ == "__main__":

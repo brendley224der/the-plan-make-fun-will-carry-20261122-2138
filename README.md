@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/brendley224der/the-plan-make-fun-will-carry-20261122-2138/rank.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
 [![reward](https://make.fun/badge/the-plan-make-fun-will-carry-20261122-2138/brendley224der/the-plan-make-fun-will-carry-20261122-2138/reward.svg)](https://make.fun/bounty/the-plan-make-fun-will-carry-20261122-2138?utm_source=github&utm_medium=readme&utm_campaign=the-plan-make-fun-will-carry-20261122-2138)
 
-A program that writes a concrete 30-day plan for an AI agent to turn $100 into $1,500: sell SEO descriptions to Etsy sellers on Fiverr, with daily outreach, reinvested profit, and a day-7 price pivot.
+A concrete 30-day plan for an AI agent to turn $100 into $1,500 by selling SEO descriptions to Etsy sellers on Fiverr, with a clear fallback if the first week brings no orders.
 
 ## Run it
 
