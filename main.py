@@ -1,6 +1,6 @@
 """Write the 30-day $100 plan to /output/entry.txt.
 
-Pure Python standard library. Fully deterministic: identical bytes on every run.
+Pure Python standard library. Deterministic output: identical bytes on every run.
 """
 
 import os
